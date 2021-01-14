@@ -35,3 +35,26 @@
 
 ### Getting Started with MongoDB Atlas
 - You can refer to this link for better understanding: https://www.knowi.com/blog/getting-started-with-mongodb-atlas-overview-and-tutorial/
+
+## About Docker
+
+- Docker is an open source project that makes it easy to create containers and container-based apps.
+- It provides a small and lightweight execution environments that make shared use of the operating system kernel but otherwise run in isolation from one another.
+
+### Components of Docker
+#### Dockerfile
+- Each Docker container starts with a Dockerfile. A Dockerfile is a text file written in an easy-to-understand syntax that includes the instructions to build a Docker image (more on that in a moment).
+- A Dockerfile specifies the operating system that will underlie the container, along with the languages, environmental variables, file locations, network ports, and other components it needs—and, of course, what the container will actually be doing once we run it.
+
+#### Docker Image
+- Once you have your Dockerfile written, you invoke the Docker build utility to create an image based on that Dockerfile.
+- A Docker image is a portable file containing the specifications for which software components the container will run and how.
+
+#### Docker Container
+- Docker’s run utility is the command that actually launches a container.
+- Each container is an instance of an image.
+- Containers are designed to be transient and temporary, but they can be stopped and restarted, which launches the container into the same state as when it was stopped.
+
+
+
+
