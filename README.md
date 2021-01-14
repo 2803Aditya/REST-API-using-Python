@@ -30,8 +30,8 @@
 - MongoDB Atlas also provides the dual benefit of flexibility and scalability.
 
 ### Pricing
-#### Free Tier (In Use)
-- MongoDB offers a free tier that users can use for learning, prototyping, and early deployment. This free edition called M0 Sandbox is limited to 512MB of storage, shared vCPU  and RAM, 100 max connections, and a limit of one M0 cluster.
+- #### Free Tier (In Use)
+  - MongoDB offers a free tier that users can use for learning, prototyping, and early deployment. This free edition called M0 Sandbox is limited to 512MB of storage, shared vCPU  and RAM, 100 max connections, and a limit of one M0 cluster.
 
 ### Getting Started with MongoDB Atlas
 - You can refer to this link for better understanding: https://www.knowi.com/blog/getting-started-with-mongodb-atlas-overview-and-tutorial/
