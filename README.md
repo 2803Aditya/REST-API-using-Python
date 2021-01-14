@@ -189,17 +189,17 @@ Code inside file:
 ## How to Access APIs on localhost
 
 - Open cmd and make sure docker is running by using "docker" command.
-![](Images/docker1.png)
+![](Images/docker1.PNG)
 
 - Then, run "docker images" command and It will show all images present on docker.
-![](Images/docker2.png)
+![](Images/docker2.PNG)
 
 - Next, run "docker ps -a" command and It will show all containers.
-![](Images/docker3.png)
+![](Images/docker3.PNG)
 
 - Then, run the following command shown below and It will start our container.
 > docker run -p &lt;host-port&gt;:&lt;docker-port&gt; &lt;ImageName&gt;
 - "-p" option will bind the host port and container port
-![](Images/docker4.png)
+![](Images/docker4.PNG)
 - So, container is up and running.
-- Now, go to browser and open http://localhost:&lt;host-port&gt;/&lt;Endpoint&gt; and we are done.
+- Now, go to browser and open http://localhost: &lt;host-port&gt; / &lt;Endpoint&gt; and we are done.
