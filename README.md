@@ -56,5 +56,17 @@
 - Containers are designed to be transient and temporary, but they can be stopped and restarted, which launches the container into the same state as when it was stopped.
 
 
+# Get Started
+
+Firstly, register youself on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas?jmp=partners_knowi) and create a connection with your cluster.
+
+After a successful creation of the connection we'll get a URI string, and with the help of that we gonna connect our cluster with the flask application.
+
+URI string example:
+'''
+"mongodb+srv://<Username>:'<password>'@<ClusterName>.csb3w.mongodb.net/<DatabaseName>?retryWrites=true&w=majority"
+'''
+
+
 
 
