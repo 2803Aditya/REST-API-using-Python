@@ -80,10 +80,10 @@ Tutorial : https://www.knowi.com/blog/getting-started-with-mongodb-atlas-overvie
 ```
   import flask, flask_pymongo, urllib, dnspython
 ```
-**Flask**: Flask provides you with tools, libraries and technologies that'll allow us to build a web application. 
-**Flask PyMongo**: Flask-PyMongo bridges Flask and PyMongo and manages MongoDB connections for your Flask app.
-**urllib**: In case when we've any escaped characters in out password field of URI string.
-**dnspython**: Provides DNS toolkit for python.
+**Flask**: Flask provides you with tools, libraries and technologies that'll allow us to build a web application.<br/>
+**Flask PyMongo**: Flask-PyMongo bridges Flask and PyMongo and manages MongoDB connections for your Flask app.<br/>
+**urllib**: In case when we've any escaped characters in out password field of URI string.<br/>
+**dnspython**: Provides DNS toolkit for python.<br/>
 
 
 
