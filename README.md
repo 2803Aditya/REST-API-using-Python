@@ -1,12 +1,12 @@
 ![](Images/Flask_Python.jpg)
 
 # Introduction
-## About RESTful API
+## About [RESTful API](https://en.wikipedia.org/wiki/Representational_state_transfer)
 - A RESTful API (also known as REST API) is an application programming interface (API or web API).
 - It a way for two computer systems to communicate over HTTP in a similar way to web browsers and servers. 
 - REST stands for representational state transfer.<br/><br/>
 ### A RESTful web service request contains:<br/>
-**An Endpoint URL**: An application implementing a RESTful API will define one or more URL endpoints with a domain, port, path, and/or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;querystring — for example,    https://mydomain/user/123?format=json.
+**An Endpoint URL**: An application implementing a RESTful API will define one or more URL endpoints with a domain, port, path, and/or querystring.
 
 **The HTTP method**: Differing HTTP methods can be used on any endpoint which map to application create, read, update, and delete (CRUD) operations:
 
@@ -24,7 +24,7 @@
 ### Flask RESTful Installation in Python
 > pip install flask-restful
 
-## About MongoDB Atlas
+## About [MongoDB Atlas](https://www.mongodb.com/cloud/atlas?jmp=partners_knowi)
 - MongoDB Atlas is a cloud-based, open-source, NoSQL database that uses JSON documents with dynamic schemas, serving as an alternative to table databases.
 - Atlas provides all the features of MongoDB, while automating database administration tasks such as database configuration, infrastructure provisioning, patches, scaling events, backups, and more, freeing up developers to focus on what matters to them most.
 - MongoDB Atlas also provides the dual benefit of flexibility and scalability.
@@ -36,7 +36,7 @@
 ### Getting Started with MongoDB Atlas
 - You can refer to this link for better understanding: https://www.knowi.com/blog/getting-started-with-mongodb-atlas-overview-and-tutorial/
 
-## About Docker
+## About [Docker](https://www.docker.com/)
 
 - Docker is an open source project that makes it easy to create containers and container-based apps.
 - It provides a small and lightweight execution environments that make shared use of the operating system kernel but otherwise run in isolation from one another.
@@ -186,7 +186,7 @@ Code inside file:
 - "-p" option will bind port 5500 of container to port 5500 on localhost of the host machine.
 - BAM!!, YOU ARE ALL SET.
 
-## How to Access APIs on localhost
+## How to Access APIs on localhost?
 
 - Open cmd and make sure docker is running by using "docker" command.<br/>
 ![](Images/docker1.PNG)
@@ -204,3 +204,9 @@ Code inside file:
 - So, container is up and running.
 - Now, go to browser and open http://localhost: &lt;host-port&gt; / &lt;Endpoint&gt; and we are done.<br/>
 ![](Images/docker5.PNG)
+
+## How to use these APIs?
+
+To use or test these APIs we are using [POSTMAN](https://web.postman.co/home). <br/>
+Postman is a Google Chrome app for interacting with HTTP APIs. It presents you with a friendly GUI for constructing requests and reading responses.<br/><br/>
+**Note: I've already mentioned the API enpoints above in the "RESTful API using Flask" section**
