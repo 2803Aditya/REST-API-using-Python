@@ -132,4 +132,56 @@ if __name__ == '__main__':
 - **host = 0.0.0.0**: It is used for External web servers.
 
 ### Deploy Docker Container
+- Create a file named 'requirements.txt'. This ifle will contain list of dependencies to be installed for our flask application.
+**Using pip command**
+> pip3 freeze > requirements.txt
 
+File content:
+```
+  Flask==1.1.2
+  flask-mongoengine==1.0.0
+  Flask-PyMongo==2.3.0
+  Flask-RESTful==0.3.8
+  ...
+  ..
+  .
+```
+
+- Create another file called Dockerfile. This file will contain all the commands that would help us build the docker image.
+
+Code inside file:
+```
+  # Python as a base image for our container
+  from python:3.8.0-buster
+
+  # Make a directory for our application
+  WORKDIR /app
+
+  # Create copy of requirements.txt file in current work directory
+  copy requirements.txt .
+
+  # pip install all the required libraries/dependencies
+  Run pip install -r requirements.txt
+
+  # Create our source code
+  copy . /app 
+
+  # Run the application
+  CMD [ "python", "Flask_RestAPI.py" ]
+```
+
+- The Dockerfile created above creates base image with python installed in it.
+- Then, in the next step set /app as working directory for our application.
+- Copy all the required dependenices in working directory. "." is represents the root directory.
+- Then, run a pip command that will install all the dependencies mentioned in the requirements.txt file.
+- Copy all source code in the current directory using dot.
+- At last use cmd command, it will run our flask application.
+
+**Build the Image using the following command**
+> docker build -t &lt;ImageName&gt; . (don't forgot the dot)
+
+**After successful building of image, run the image inside the docker container using the following command**
+> docker run -p 5500:5500 &lt;ImageName&gt;
+
+- "-p" option will bind port 5500 of container to port 5500 on localhost of the host machine.
+- BAM!!, YOU ARE ALL SET.
