@@ -58,14 +58,17 @@
 
 # Get Started
 
+### MongoDB Atlas Registeration
 Firstly, register youself on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas?jmp=partners_knowi) and create a connection with your cluster.
 
 After a successful creation of the connection we'll get a URI string, and with the help of that we gonna connect our cluster with the flask application.
 
 URI string example:
-'''
-"mongodb+srv://<Username>:'<password>'@<ClusterName>.csb3w.mongodb.net/<DatabaseName>?retryWrites=true&w=majority"
-'''
+> mongodb+srv://&ltUsername&gt:'&ltpassword&gt'@&ltClusterName&gt.csb3w.mongodb.net/&ltDatabaseName&gt?retryWrites=true&w=majority
+
+Tutorial : https://www.knowi.com/blog/getting-started-with-mongodb-atlas-overview-and-tutorial/
+
+
 
 
 
