@@ -1,1 +1,1 @@
-![](Images/filename%20Flask_Python.jpg)
+![](Images/Flask_Python.jpg)
