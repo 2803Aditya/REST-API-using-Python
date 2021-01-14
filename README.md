@@ -64,12 +64,26 @@ Firstly, register youself on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas
 After a successful creation of the connection we'll get a URI string, and with the help of that we gonna connect our cluster with the flask application.
 
 URI string example:
-> mongodb+srv://&ltUsername&gt:'&ltpassword&gt'@&ltClusterName&gt.csb3w.mongodb.net/&ltDatabaseName&gt?retryWrites=true&w=majority
+> mongodb+srv://&lt;Username&gt;:'&lt;password&gt;'@&lt;ClusterName&gt;.csb3w.mongodb.net/&lt;DatabaseName&gt;?retryWrites=true&w=majority
 
 Tutorial : https://www.knowi.com/blog/getting-started-with-mongodb-atlas-overview-and-tutorial/
 
-
-
+### RESTful API using FLASK
+- Install all the required libraries/dependencies using the pip command.
+```
+  pip install flask
+  pip install flask_pymongo
+  pip install urlib
+  pip install dnspython
+```
+- After the successful installation of each dependencies, next step is importing dependenies in our python file.
+```
+  import flask, flask_pymongo, urllib, dnspython
+```
+**Flask**: Flask provides you with tools, libraries and technologies that'll allow us to build a web application. 
+**Flask PyMongo**: Flask-PyMongo bridges Flask and PyMongo and manages MongoDB connections for your Flask app.
+**urllib**: In case when we've any escaped characters in out password field of URI string.
+**dnspython**: Provides DNS toolkit for python.
 
 
 
