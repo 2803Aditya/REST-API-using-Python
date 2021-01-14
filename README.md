@@ -58,7 +58,7 @@
 
 # Get Started
 
-### MongoDB Atlas Registeration
+## MongoDB Atlas Registeration
 Firstly, register youself on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas?jmp=partners_knowi) and create a connection with your cluster.
 
 After a successful creation of the connection we'll get a URI string, and with the help of that we gonna connect our cluster with the flask application.
@@ -68,7 +68,7 @@ URI string example:
 
 Tutorial : https://www.knowi.com/blog/getting-started-with-mongodb-atlas-overview-and-tutorial/
 
-### RESTful API using FLASK
+## RESTful API using FLASK
 - Install all the required libraries/dependencies using the pip command.
 ```
   pip install flask
@@ -87,8 +87,8 @@ Tutorial : https://www.knowi.com/blog/getting-started-with-mongodb-atlas-overvie
 
 - Now, Create a connection between our flask application and MongoDB using the connection string.
 ```
-db_name = 'DatabaseName'
-db_URI = 'mongodb+srv://&lt;Username&gt;:'&lt;Password&gt;'@myfirstcluster.csb3w.mongodb.net/&lt;DatabaseName&gt;?retryWrites=true&w=majority'
+db_name = &lt;DatabadeName&gt;
+db_URI = mongodb+srv://&lt;Username&gt;:&lt;Password&gt;@myfirstcluster.csb3w.mongodb.net/&lt;DatabaseName&gt;?retryWrites=true&w=majority
 app.config['MONGODB_NAME'] = db_name
 app.config['MONGO_URI'] = db_URI
 
@@ -131,7 +131,7 @@ if __name__ == '__main__':
 - **app.run**: The flask run command provides options to set the server listening IP address and port, SSL certificates, etc.
 - **host = 0.0.0.0**: It is used for External web servers.
 
-### Deploy Docker Container
+## Deploy Docker Container
 - Create a file named 'requirements.txt'. This ifle will contain list of dependencies to be installed for our flask application.
 **Using pip command**
 > pip3 freeze > requirements.txt
@@ -185,3 +185,19 @@ Code inside file:
 
 - "-p" option will bind port 5500 of container to port 5500 on localhost of the host machine.
 - BAM!!, YOU ARE ALL SET.
+
+## How to Access APIs on localhost
+
+- Open cmd and make sure docker is running by using "docker" command.
+![]()
+
+- Then, run "docker images" command and it will show all images present on docker.
+![]()
+
+- Next, run "docker ps -a" command and it will show all running containers.
+![]()
+
+- Then, run the following command:
+> docker run -p &lt;host-port&gt;:&lt;docker-port&gt; &lt;ImageName&gt;
+- "-p" option will bind the host port and container port
+![]()
