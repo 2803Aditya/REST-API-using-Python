@@ -85,5 +85,51 @@ Tutorial : https://www.knowi.com/blog/getting-started-with-mongodb-atlas-overvie
 **urllib**: In case when we've any escaped characters in out password field of URI string.<br/>
 **dnspython**: Provides DNS toolkit for python.<br/>
 
+- Now, Create a connection between our flask application and MongoDB using the connection string.
+```
+db_name = 'DatabaseName'
+db_URI = 'mongodb+srv://&lt;Username&gt;:'&lt;Password&gt;'@myfirstcluster.csb3w.mongodb.net/&lt;DatabaseName&gt;?retryWrites=true&w=majority'
+app.config['MONGODB_NAME'] = db_name
+app.config['MONGO_URI'] = db_URI
 
+mongo = PyMongo(app)
+```
+
+**app** is a central object of our flask application
+**app.configuration** Configuration of Database
+**PyMongo** will manage MongoDB connections for our flask application.
+
+#### CRUD operation API endpoints
+- Let's see what each of the HTTP methods for our API does:
+  - **GET /api/Products**: It will return the details of all objects from our collection (with status code 200).
+  - **POST /api/Products/add**: Create a new object in our collection and return 201 status code.
+  - **PUT /api/Products/&ltid&gt**: Update fields of an object (with success code 201 and status code 404 for an failed operation).
+  - **DELETE /api/Products/delete/&ltid&gt**: Delete an Object from collection with success code 204 and 404 for an failed operation.
+  - **GET /api/Products/find/&ltid&gt**: It will return details of the specified object (with failed status code 404).
+  
+ **Read Operation**
+ ```
+ @app.route('/api/Products', methods = ['GET'])   # Allowed Method "GET"               
+def get_data():
+
+    data = mongo.db.Titanic    # Collection name is "Titanic"
+    output = []
+
+    for i in data.find():      # Query the database
+        output.append({'Product Name' : i['name'], 'Offer Price' : i['offer_price_value']}) 
+
+    return jsonify({'Result' : output}) # JSON serialization and this'll return a JSON response to our browser
+ ```
+ 
+- Check out remanining CRUD operation in the Flask_RestAPI.py file.
+
+```
+if __name__ == '__main__':
+    app.run(host = "0.0.0.0", port = 5000)
+```
+
+- **app.run**: The flask run command provides options to set the server listening IP address and port, SSL certificates, etc.
+- **host = 0.0.0.0**: It is used for External web servers.
+
+### Deploy Docker Container
 
